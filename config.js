@@ -1,0 +1,79 @@
+window.CERSEA_CONFIG = {
+  defaultLanguage: "en",
+
+  socialLinks: [
+    {
+      id: "instagram",
+      name: "Instagram",
+      url: "https://www.instagram.com/serena_sersea/",
+      descriptions: {
+        en: "Photos, stories and everyday moments.",
+        de: "Fotos, Stories und Momente aus dem Alltag.",
+        ru: "Фотографии, истории и повседневные моменты."
+      }
+    },
+    {
+      id: "x",
+      name: "X",
+      url: "https://x.com/SerseaRou",
+      descriptions: {
+        en: "Thoughts, updates and conversations.",
+        de: "Gedanken, Neuigkeiten und Gespräche.",
+        ru: "Мысли, новости и разговоры."
+      }
+    },
+    {
+      id: "tiktok",
+      name: "TikTok",
+      url: "https://www.tiktok.com/@serenachiburdanidze",
+      descriptions: {
+        en: "Short videos, movement and mood.",
+        de: "Kurze Videos, Bewegung und Stimmung.",
+        ru: "Короткие видео, движение и настроение."
+      }
+    },
+    {
+      id: "facebook",
+      name: "Facebook",
+      url: "https://www.facebook.com/profile.php?id=61558945395473",
+      descriptions: {
+        en: "Posts, photos and community updates.",
+        de: "Beiträge, Fotos und Neuigkeiten für die Community.",
+        ru: "Публикации, фотографии и новости сообщества."
+      }
+    }
+  ],
+
+  messageLinks: [
+    {
+      id: "telegram",
+      name: "Telegram",
+      url: "https://t.me/trans_sersea",
+      descriptions: {
+        en: "Direct messages and personal updates.",
+        de: "Direkte Nachrichten und persönliche Updates.",
+        ru: "Личные сообщения и обновления."
+      }
+    },
+    {
+      id: "signal",
+      name: "Signal",
+      url: "https://signal.me/#eu/FWUFheACe__a4bHUwVlxVh_DVOc1PBcaRNQS8kDQkSd17yvHzO5Ji5JMWqVQlZcq",
+      descriptions: {
+        en: "Simple and private communication.",
+        de: "Einfache und private Kommunikation.",
+        ru: "Простое и приватное общение."
+      }
+    },
+    {
+      id: "whatsapp",
+      name: "WhatsApp",
+      url: "https://wa.me/4915164320954",
+      descriptions: {
+        en: "Direct and familiar messaging.",
+        de: "Direkte und vertraute Kommunikation.",
+        ru: "Привычное и прямое общение."
+      }
+    }
+  ]
+};
