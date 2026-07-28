@@ -1,58 +1,257 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Privacy — Serena Cersea</title>
+  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="Datenschutzerklärung der Website Serena Cersea.">
+  <title>Datenschutz — Serena Cersea</title>
   
 <style>
-  :root { color-scheme: dark; }
+  :root {
+    color-scheme: dark;
+    --bg: #0b090a;
+    --surface: rgba(255, 255, 255, 0.045);
+    --ivory: #f7efe4;
+    --papyrus: #efe2c6;
+    --gold: #c6a15b;
+    --muted: #b8aaa3;
+    --border: rgba(239, 226, 198, 0.16);
+  }
+
   * { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    background: var(--bg);
+  }
+
   body {
     margin: 0;
-    color: #f7efe4;
-    background: #0b090a;
+    min-width: 320px;
+    color: var(--ivory);
+    background:
+      radial-gradient(circle at 85% 10%, rgba(101, 56, 72, 0.18), transparent 30rem),
+      linear-gradient(180deg, var(--bg), #100c0f 70%, var(--bg));
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-    line-height: 1.7;
+    line-height: 1.75;
   }
-  main { width: min(100% - 2rem, 760px); margin: 0 auto; padding: 4rem 0 6rem; }
-  a { color: #c6a15b; }
-  h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; }
-  h1 { font-size: clamp(2.8rem, 8vw, 5rem); line-height: 1; }
-  h2 { margin-top: 2.5rem; }
-  .draft {
-    padding: 1rem 1.2rem;
-    border: 1px solid rgba(198, 161, 91, .45);
-    border-radius: 14px;
-    background: rgba(198, 161, 91, .08);
+
+  main {
+    width: min(100% - 2rem, 780px);
+    margin: 0 auto;
+    padding: 3rem 0 6rem;
   }
-  .placeholder { color: #c6a15b; font-weight: 700; }
+
+  a {
+    color: var(--gold);
+    text-underline-offset: 0.2em;
+  }
+
+  .back {
+    display: inline-flex;
+    margin-bottom: 2.5rem;
+    text-decoration: none;
+  }
+
+  h1, h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 500;
+  }
+
+  h1 {
+    margin: 0 0 1rem;
+    color: var(--papyrus);
+    font-size: clamp(3rem, 9vw, 5.6rem);
+    line-height: 0.95;
+    letter-spacing: -0.045em;
+  }
+
+  h2 {
+    margin: 2.7rem 0 0.7rem;
+    color: var(--papyrus);
+    font-size: clamp(1.55rem, 4vw, 2.1rem);
+    line-height: 1.15;
+  }
+
+  p { margin: 0.5rem 0 1rem; }
+
+  address {
+    margin: 1rem 0;
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--surface);
+    font-style: normal;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.7rem;
+    color: var(--gold);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .muted {
+    color: var(--muted);
+  }
+
+  .updated {
+    margin-top: 3.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+  }
+
+  li + li {
+    margin-top: 0.45rem;
+  }
 </style>
 
 </head>
 <body>
   <main>
-    <a href="index.html">← Back to Serena Cersea</a>
-    <h1>Privacy</h1>
-    <p class="draft"><strong>Draft — not ready for publication.</strong><br>
-    This page must be completed after the domain, hosting provider, business email and responsible legal person are confirmed.</p>
+    <a class="back" href="index.html">← Zurück zu Serena Cersea</a>
 
-    <h2>Responsible person</h2>
-    <p class="placeholder">[Legal name and postal address]</p>
-    <p>Email: <a href="mailto:serenacedaris@gmail.com">serenacedaris@gmail.com</a></p>
+    <p class="eyebrow">Datenschutz</p>
+    <h1>Datenschutzerklärung</h1>
 
-    <h2>Hosting and server logs</h2>
-    <p class="placeholder">[Hosting provider, processed log data, purpose, legal basis and retention period]</p>
+    <h2>1. Verantwortliche Stelle</h2>
+    <address>
+      <strong>Serena Chiburdanidze</strong><br>
+      Zehntgasse 1<br>
+      97252 Frickenhausen am Main<br>
+      Deutschland<br><br>
+      E-Mail: <a href="mailto:serenacedaris@gmail.com">serenacedaris@gmail.com</a>
+    </address>
 
-    <h2>External links</h2>
-    <p>This website links to external social networks and messaging services. Data is transferred to those services only after a visitor actively follows a link.</p>
+    <h2>2. Bereitstellung der Website über GitHub Pages</h2>
+    <p>
+      Diese Website wird über GitHub Pages bereitgestellt. Anbieter sind GitHub B.V.,
+      Prins Bernhardplein 200, 1097 JB Amsterdam, Niederlande, und GitHub, Inc.,
+      88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.
+    </p>
+    <p>
+      Beim Aufruf der Website verarbeitet GitHub technisch erforderliche Verbindungs-
+      und Nutzungsdaten. Dazu können insbesondere die IP-Adresse, Browser- und
+      Geräteinformationen, Datum und Uhrzeit der Anfrage, aufgerufene Seiten sowie
+      die zuvor besuchte Seite gehören. GitHub weist ausdrücklich darauf hin, dass
+      bei Besuchen von GitHub-Pages-Websites die IP-Adresse zu Sicherheitszwecken
+      protokolliert und gespeichert wird.
+    </p>
+    <p>
+      Die Verarbeitung erfolgt zur sicheren, stabilen und technisch zuverlässigen
+      Bereitstellung der Website auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.
+      Das berechtigte Interesse besteht im sicheren und fehlerfreien Betrieb dieses
+      Internetauftritts. GitHub kann Daten auch in den USA und in weiteren Ländern
+      verarbeiten. Weitere Informationen enthält die Datenschutzerklärung von GitHub:
+      <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
+         target="_blank" rel="noopener noreferrer">GitHub General Privacy Statement</a>.
+    </p>
 
-    <h2>Cookies and analytics</h2>
-    <p>The current static version does not use analytics, advertising pixels or optional cookies.</p>
+    <h2>3. Google Fonts</h2>
+    <p>
+      Für die einheitliche und hochwertige Darstellung der Schriftarten lädt diese
+      Website die Schriftarten „Cormorant Garamond“ und „Manrope“ über Google Fonts.
+      Beim Aufruf der Website stellt der Browser hierfür eine Verbindung zu Servern
+      von Google her. Dabei können insbesondere die IP-Adresse sowie technische
+      Browser- und Geräteinformationen an Google übermittelt werden.
+    </p>
+    <p>
+      Anbieter ist Google LLC, USA. Die Einbindung erfolgt auf Grundlage von
+      Art. 6 Abs. 1 lit. f DSGVO. Das berechtigte Interesse besteht in einer
+      einheitlichen, lesbaren und gestalterisch hochwertigen Darstellung der Website.
+      Informationen zur Datenverarbeitung durch Google finden Sie unter:
+      <a href="https://policies.google.com/privacy"
+         target="_blank" rel="noopener noreferrer">Google Datenschutzerklärung</a>.
+    </p>
 
-    <h2>Your rights</h2>
-    <p class="placeholder">[Access, correction, deletion, restriction, objection and complaint information]</p>
+    <h2>4. Kontaktaufnahme per E-Mail</h2>
+    <p>
+      Wenn Sie per E-Mail Kontakt aufnehmen, werden die von Ihnen übermittelten Daten
+      einschließlich Ihrer E-Mail-Adresse und des Inhalts der Nachricht verarbeitet,
+      um Ihre Anfrage zu beantworten. Erfolgt die Kontaktaufnahme zur Anbahnung oder
+      Durchführung eines Vertrags, ist Art. 6 Abs. 1 lit. b DSGVO die Rechtsgrundlage.
+      In allen anderen Fällen erfolgt die Verarbeitung auf Grundlage von
+      Art. 6 Abs. 1 lit. f DSGVO aufgrund des berechtigten Interesses an der
+      Bearbeitung eingehender Anfragen.
+    </p>
+    <p>
+      Für die E-Mail-Kommunikation wird Gmail von Google verwendet. Dadurch können
+      Daten durch Google verarbeitet und gegebenenfalls in Drittländer übertragen
+      werden. Nachrichten werden gelöscht, sobald die Bearbeitung abgeschlossen ist
+      und keine gesetzlichen Aufbewahrungspflichten oder sonstigen berechtigten
+      Gründe für eine weitere Speicherung bestehen.
+    </p>
+
+    <h2>5. Externe Links und soziale Netzwerke</h2>
+    <p>
+      Diese Website enthält Links zu externen sozialen Netzwerken und
+      Nachrichtendiensten, insbesondere Instagram, Facebook, X, TikTok, Telegram,
+      Signal und WhatsApp. Beim bloßen Besuch dieser Website werden durch diese Links
+      keine Daten an die jeweiligen Dienste übertragen. Eine Verbindung wird erst
+      hergestellt, wenn Sie einen Link aktiv anklicken. Ab diesem Zeitpunkt gelten
+      die Datenschutzbestimmungen des jeweiligen externen Anbieters.
+    </p>
+
+    <h2>6. Cookies, Analyse und Werbung</h2>
+    <p>
+      Die Website selbst setzt keine eigenen Cookies, verwendet keine
+      Webanalyse-Dienste, keine Werbepixel und kein Profiling. GitHub kann als
+      Hosting-Plattform technisch erforderliche Cookies oder vergleichbare
+      Technologien einsetzen. Einzelheiten ergeben sich aus den
+      Datenschutzinformationen von GitHub.
+    </p>
+
+    <h2>7. Speicherdauer</h2>
+    <p>
+      Personenbezogene Daten werden nur so lange gespeichert, wie dies für den
+      jeweiligen Zweck erforderlich ist oder gesetzliche Aufbewahrungspflichten
+      bestehen. Auf die konkrete Speicherdauer der durch GitHub oder Google
+      verarbeiteten Daten besteht kein unmittelbarer Einfluss.
+    </p>
+
+    <h2>8. Ihre Rechte</h2>
+    <p>Nach Maßgabe der DSGVO haben betroffene Personen insbesondere das Recht auf:</p>
+    <ul>
+      <li>Auskunft über die verarbeiteten personenbezogenen Daten,</li>
+      <li>Berichtigung unrichtiger oder unvollständiger Daten,</li>
+      <li>Löschung, soweit keine gesetzlichen Gründe entgegenstehen,</li>
+      <li>Einschränkung der Verarbeitung,</li>
+      <li>Widerspruch gegen eine Verarbeitung auf Grundlage berechtigter Interessen,</li>
+      <li>Datenübertragbarkeit, soweit die gesetzlichen Voraussetzungen vorliegen.</li>
+    </ul>
+    <p>
+      Zur Ausübung dieser Rechte genügt eine Nachricht an
+      <a href="mailto:serenacedaris@gmail.com">serenacedaris@gmail.com</a>.
+    </p>
+
+    <h2>9. Beschwerderecht</h2>
+    <p>
+      Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren.
+      Zuständig für nichtöffentliche Stellen in Bayern ist insbesondere:
+    </p>
+    <address>
+      Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)<br>
+      Promenade 18<br>
+      91522 Ansbach<br>
+      Deutschland
+    </address>
+
+    <h2>10. Änderungen dieser Datenschutzerklärung</h2>
+    <p>
+      Diese Datenschutzerklärung wird angepasst, wenn sich die Website, die
+      eingesetzten Dienste oder die rechtlichen Anforderungen ändern.
+    </p>
+
+    <p class="updated">Stand: 28. Juli 2026</p>
   </main>
 </body>
 </html>
