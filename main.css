@@ -99,7 +99,7 @@ button {
   position: absolute;
   inset: 0;
   z-index: -3;
-  background-image: url("../assets/images/serena-cersea-hero.webp");
+  background-image: url("serena-cersea-hero.webp");
   background-repeat: no-repeat;
   background-position: 59% center;
   background-size: cover;
