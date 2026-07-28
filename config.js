@@ -11,6 +11,11 @@ window.CERSEA_CONFIG = {
         en: "Photos, stories and everyday moments.",
         de: "Fotos, Stories und Momente aus dem Alltag.",
         ru: "Фотографии, истории и повседневные моменты."
+      },
+      audience: {
+        en: "≈1K followers",
+        de: "≈1.000 Follower",
+        ru: "≈1 тыс. подписчиков"
       }
     },
     {
@@ -21,6 +26,11 @@ window.CERSEA_CONFIG = {
         en: "Thoughts, updates and conversations.",
         de: "Gedanken, Neuigkeiten und Gespräche.",
         ru: "Мысли, новости и разговоры."
+      },
+      audience: {
+        en: "≈1K followers",
+        de: "≈1.000 Follower",
+        ru: "≈1 тыс. подписчиков"
       }
     },
     {
@@ -31,6 +41,11 @@ window.CERSEA_CONFIG = {
         en: "Short videos, movement and mood.",
         de: "Kurze Videos, Bewegung und Stimmung.",
         ru: "Короткие видео, движение и настроение."
+      },
+      audience: {
+        en: "≈10K followers",
+        de: "≈10.000 Follower",
+        ru: "≈10 тыс. подписчиков"
       }
     },
     {
@@ -41,6 +56,11 @@ window.CERSEA_CONFIG = {
         en: "Posts, photos and community updates.",
         de: "Beiträge, Fotos und Neuigkeiten für die Community.",
         ru: "Публикации, фотографии и новости сообщества."
+      },
+      audience: {
+        en: "≈10K followers",
+        de: "≈10.000 Follower",
+        ru: "≈10 тыс. подписчиков"
       }
     }
   ],

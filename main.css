@@ -666,3 +666,112 @@ button {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* Community proof and live visit count */
+.section--proof {
+  padding-top: clamp(3.75rem, 8vw, 6rem);
+  padding-bottom: clamp(1.5rem, 4vw, 3rem);
+}
+
+.proof-panel {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding: clamp(1.5rem, 5vw, 4rem);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-large);
+  background:
+    radial-gradient(circle at 90% 12%, rgba(198, 161, 91, 0.12), transparent 18rem),
+    linear-gradient(135deg, rgba(101, 56, 72, 0.18), transparent 58%),
+    rgba(255, 255, 255, 0.03);
+  box-shadow: var(--shadow);
+}
+
+.proof-panel__heading {
+  max-width: 44rem;
+}
+
+.proof-panel__heading p:last-child {
+  max-width: 38rem;
+  margin: 1.15rem 0 0;
+  color: var(--muted);
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.proof-stat {
+  display: grid;
+  min-height: 8.5rem;
+  align-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem;
+  border: 1px solid rgba(239, 226, 198, 0.12);
+  border-radius: var(--radius-medium);
+  background: rgba(11, 9, 10, 0.28);
+}
+
+.proof-stat strong {
+  color: var(--papyrus);
+  font-family: var(--font-display);
+  font-size: clamp(2.35rem, 7vw, 4.2rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 0.9;
+}
+
+.proof-stat span {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.proof-stat--primary {
+  border-color: rgba(198, 161, 91, 0.34);
+  background:
+    linear-gradient(145deg, rgba(198, 161, 91, 0.09), transparent),
+    rgba(11, 9, 10, 0.34);
+}
+
+.proof-stat--visits strong {
+  color: var(--gold);
+}
+
+.card-audience {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 0.9rem;
+  padding: 0.28rem 0.58rem;
+  color: var(--gold);
+  border: 1px solid rgba(198, 161, 91, 0.24);
+  border-radius: 999px;
+  background: rgba(198, 161, 91, 0.055);
+  font-size: 0.63rem;
+  font-weight: 600;
+  letter-spacing: 0.055em;
+}
+
+@media (min-width: 720px) {
+  .proof-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .proof-stat {
+    min-height: 10rem;
+    padding: 1.35rem;
+  }
+}
+
+@media (min-width: 980px) {
+  .proof-panel {
+    grid-template-columns: minmax(0, 0.85fr) minmax(34rem, 1.15fr);
+    align-items: end;
+  }
+}

@@ -31,6 +31,13 @@
       contactTitle: "Collaborations and creative work.",
       contactText: "For collaborations and professional enquiries, contact me by email.",
       contactButton: "Write by email",
+      proofLabel: "Community",
+      proofTitle: "A growing world across platforms.",
+      proofIntro: "Approximate combined follows across my public communities.",
+      proofTotal: "combined follows",
+      proofTelegram: "Telegram community",
+      proofLanguages: "languages",
+      visitorLabel: "site visits since launch",
       privacy: "Privacy",
       imprint: "Impressum",
       comingSoon: "Link coming soon"
@@ -57,6 +64,13 @@
       contactTitle: "Kooperationen und kreative Arbeit.",
       contactText: "Für Kooperationen und professionelle Anfragen kontaktiere mich per E-Mail.",
       contactButton: "E-Mail schreiben",
+      proofLabel: "Community",
+      proofTitle: "Eine wachsende Welt auf mehreren Plattformen.",
+      proofIntro: "Ungefähre Summe der Follows in meinen öffentlichen Communities.",
+      proofTotal: "Follows insgesamt",
+      proofTelegram: "Telegram-Community",
+      proofLanguages: "Sprachen",
+      visitorLabel: "Website-Aufrufe seit dem Start",
       privacy: "Datenschutz",
       imprint: "Impressum",
       comingSoon: "Link folgt"
@@ -83,6 +97,13 @@
       contactTitle: "Сотрудничество и творческая работа.",
       contactText: "По вопросам сотрудничества и профессиональным предложениям напишите мне по электронной почте.",
       contactButton: "Написать по email",
+      proofLabel: "Сообщество",
+      proofTitle: "Растущий мир на разных платформах.",
+      proofIntro: "Приблизительное суммарное число подписок в моих публичных сообществах.",
+      proofTotal: "подписок на платформах",
+      proofTelegram: "сообщество Telegram",
+      proofLanguages: "языка",
+      visitorLabel: "посещений сайта с момента запуска",
       privacy: "Конфиденциальность",
       imprint: "Правовая информация",
       comingSoon: "Ссылка появится позже"
@@ -94,8 +115,10 @@
   const languageButtons = [...document.querySelectorAll("[data-language]")];
   const yearElement = document.querySelector("#current-year");
   const businessEmailLink = document.querySelector("#business-email-link");
+  const visitorCountElement = document.querySelector("#visitor-count");
 
   let activeLanguage = config.defaultLanguage || "en";
+  let visitorCountValue = 0;
 
   function createLinkCard(item, type) {
     const hasUrl = typeof item.url === "string" && item.url.trim() !== "";
@@ -134,6 +157,14 @@
 
     topLine.append(name, arrow);
     content.append(topLine, description);
+
+    if (item.audience) {
+      const audience = document.createElement("span");
+      audience.className = "card-audience";
+      audience.textContent = item.audience[activeLanguage] || item.audience.en;
+      content.append(audience);
+    }
+
     link.append(content);
 
     if (!hasUrl && type !== "message") {
@@ -154,6 +185,40 @@
     messageContainer.replaceChildren(
       ...config.messageLinks.map((item) => createLinkCard(item, "message"))
     );
+  }
+
+
+  function updateVisitorCount() {
+    if (!visitorCountElement) return;
+
+    visitorCountElement.textContent = new Intl.NumberFormat(activeLanguage).format(
+      visitorCountValue
+    );
+  }
+
+  async function loadVisitorCount() {
+    if (!visitorCountElement) return;
+
+    try {
+      const response = await fetch(
+        "https://serenacersea.goatcounter.com/counter/%2Fhome.json",
+        { cache: "no-store" }
+      );
+
+      if (!response.ok) {
+        throw new Error(`Counter request failed: ${response.status}`);
+      }
+
+      const data = await response.json();
+      const parsedValue = Number(String(data.count || "0").replace(/[^0-9]/g, ""));
+
+      visitorCountValue = Number.isFinite(parsedValue) ? parsedValue : 0;
+    } catch (error) {
+      visitorCountValue = 0;
+      console.warn("Visitor counter is not available yet.", error);
+    }
+
+    updateVisitorCount();
   }
 
   function applyLanguage(language) {
@@ -179,6 +244,7 @@
     });
 
     renderCards();
+    updateVisitorCount();
   }
 
   languageButtons.forEach((button) => {
@@ -195,4 +261,5 @@
   }
 
   applyLanguage(activeLanguage);
+  loadVisitorCount();
 })();
