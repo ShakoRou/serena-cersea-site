@@ -29,8 +29,8 @@
       projectsText: "Films, visual experiments, educational ideas and digital projects will gradually appear here.",
       contactLabel: "Business contact",
       contactTitle: "Collaborations and creative work.",
-      contactText: "For professional enquiries, use the dedicated business contact.",
-      contactButton: "Contact details coming soon",
+      contactText: "For collaborations and professional enquiries, contact me by email.",
+      contactButton: "Write by email",
       privacy: "Privacy",
       imprint: "Impressum",
       comingSoon: "Link coming soon"
@@ -55,8 +55,8 @@
       projectsText: "Filme, visuelle Experimente, Bildungsideen und digitale Projekte werden nach und nach hier erscheinen.",
       contactLabel: "Geschäftlicher Kontakt",
       contactTitle: "Kooperationen und kreative Arbeit.",
-      contactText: "Für professionelle Anfragen nutze bitte den dafür vorgesehenen Geschäftskontakt.",
-      contactButton: "Kontaktdaten folgen",
+      contactText: "Für Kooperationen und professionelle Anfragen kontaktiere mich per E-Mail.",
+      contactButton: "E-Mail schreiben",
       privacy: "Datenschutz",
       imprint: "Impressum",
       comingSoon: "Link folgt"
@@ -81,8 +81,8 @@
       projectsText: "Фильмы, визуальные эксперименты, образовательные идеи и цифровые проекты постепенно появятся здесь.",
       contactLabel: "Деловой контакт",
       contactTitle: "Сотрудничество и творческая работа.",
-      contactText: "Для профессиональных предложений будет доступен отдельный деловой контакт.",
-      contactButton: "Контакт появится позже",
+      contactText: "По вопросам сотрудничества и профессиональным предложениям напишите мне по электронной почте.",
+      contactButton: "Написать по email",
       privacy: "Конфиденциальность",
       imprint: "Правовая информация",
       comingSoon: "Ссылка появится позже"
@@ -93,6 +93,7 @@
   const messageContainer = document.querySelector("#message-cards");
   const languageButtons = [...document.querySelectorAll("[data-language]")];
   const yearElement = document.querySelector("#current-year");
+  const businessEmailLink = document.querySelector("#business-email-link");
 
   let activeLanguage = config.defaultLanguage || "en";
 
@@ -187,5 +188,11 @@
   });
 
   yearElement.textContent = String(new Date().getFullYear());
+
+  if (businessEmailLink && config.businessEmail) {
+    const subject = encodeURIComponent("Business enquiry — Serena Cersea");
+    businessEmailLink.href = `mailto:${config.businessEmail}?subject=${subject}`;
+  }
+
   applyLanguage(activeLanguage);
 })();

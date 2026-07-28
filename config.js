@@ -1,5 +1,6 @@
 window.CERSEA_CONFIG = {
   defaultLanguage: "en",
+  businessEmail: "serenacedaris@gmail.com",
 
   socialLinks: [
     {
