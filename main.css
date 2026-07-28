@@ -775,3 +775,61 @@ button {
     align-items: end;
   }
 }
+
+
+/* v1.3 — Community section readability fix */
+.section--proof h2 {
+  max-width: 14ch;
+  font-size: clamp(2.35rem, 6vw, 4.35rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  overflow-wrap: normal;
+}
+
+.proof-panel__heading,
+.proof-grid,
+.proof-stat {
+  min-width: 0;
+}
+
+.proof-stat {
+  min-height: 9.25rem;
+  align-content: start;
+  grid-template-rows: auto 1fr;
+  gap: 1.15rem;
+}
+
+.proof-stat strong {
+  display: block;
+  font-size: clamp(2.4rem, 5vw, 3.75rem);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.proof-stat span {
+  display: block;
+  margin-top: auto;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+@media (min-width: 980px) {
+  .proof-panel {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .proof-panel__heading {
+    max-width: 48rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .proof-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proof-stat {
+    min-height: 7.5rem;
+  }
+}
