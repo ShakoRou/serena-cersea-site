@@ -140,8 +140,20 @@
   function createBadge(item) {
     const badge = document.createElement("span");
     badge.className = "card-badge";
-    badge.textContent = item.badge || item.name.slice(0, 2).toUpperCase();
     badge.setAttribute("aria-hidden", "true");
+
+    if (item.icon) {
+      const icon = document.createElement("img");
+      icon.className = "card-badge__icon";
+      icon.src = item.icon;
+      icon.alt = "";
+      icon.loading = "eager";
+      icon.decoding = "async";
+      badge.append(icon);
+    } else {
+      badge.textContent = item.badge || item.name.slice(0, 2).toUpperCase();
+    }
+
     return badge;
   }
 
