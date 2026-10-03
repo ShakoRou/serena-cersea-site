@@ -5,6 +5,7 @@ window.SERSEA_CONFIG = {
   socialLinks: [
     {
       id: "instagram",
+      icon: "icon-instagram.svg",
       badge: "IG",
       name: "Instagram",
       url: "https://www.instagram.com/serena_sersea/",
@@ -21,6 +22,7 @@ window.SERSEA_CONFIG = {
     },
     {
       id: "x",
+      icon: "icon-x.svg",
       badge: "X",
       name: "X",
       url: "https://x.com/SerseaRou",
@@ -37,6 +39,7 @@ window.SERSEA_CONFIG = {
     },
     {
       id: "tiktok",
+      icon: "icon-tiktok.svg",
       badge: "TT",
       name: "TikTok",
       url: "https://www.tiktok.com/@serenachiburdanidze",
@@ -56,6 +59,7 @@ window.SERSEA_CONFIG = {
   messageLinks: [
     {
       id: "telegram",
+      icon: "icon-telegram.svg",
       badge: "TG",
       name: "Telegram",
       featured: true,
@@ -68,6 +72,7 @@ window.SERSEA_CONFIG = {
     },
     {
       id: "whatsapp",
+      icon: "icon-whatsapp.svg",
       badge: "WA",
       name: "WhatsApp",
       url: "https://wa.me/4915164320954",
@@ -79,6 +84,7 @@ window.SERSEA_CONFIG = {
     },
     {
       id: "signal",
+      icon: "icon-signal.svg",
       badge: "SG",
       name: "Signal",
       url: "https://signal.me/#eu/FWUFheACe__a4bHUwVlxVh_DVOc1PBcaRNQS8kDQkSd17yvHzO5Ji5JMWqVQlZcq",
