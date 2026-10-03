@@ -1,112 +1,129 @@
 (() => {
   "use strict";
 
-  const config = window.CERSEA_CONFIG;
+  const config = window.SERSEA_CONFIG;
 
   if (!config) {
-    console.error("CERSEA_CONFIG is missing.");
+    console.error("SERSEA_CONFIG is missing.");
     return;
   }
 
   const translations = {
-    en: {
-      heroEyebrow: "The visual world of",
-      heroLead: "A visual journal shaped by two worlds.",
-      heroTopics: "Photography · Video · Quiet moments · Thoughts",
-      exploreButton: "Explore my journal",
-      messageButton: "Contact",
-      followLabel: "Follow my journal",
-      followTitle: "Choose where our stories continue.",
-      followIntro: "Photos, videos, everyday moments and reflections — each platform shows a different part of my world.",
-      messageLabel: "Contact",
-      messageTitle: "Choose your preferred messenger.",
-      messageIntro: "Use Telegram, Signal or WhatsApp for messages and general enquiries. All links on this page are official.",
-      aboutLabel: "About Serena Cersea",
-      aboutTitle: "A visual life between cultures, places and ideas.",
-      aboutText: "This is my journal — a collection of photographs, videos, quiet moments and personal reflections.",
-      projectsLabel: "Creative projects",
-      projectsTitle: "More stories are taking shape.",
-      projectsText: "Films, visual experiments, educational ideas and digital projects will gradually appear here.",
-      contactLabel: "Business contact",
-      contactTitle: "Collaborations and creative work.",
-      contactText: "For collaborations and professional enquiries, contact me by email.",
-      contactButton: "Write by email",
-      proofLabel: "Community",
-      proofTitle: "A growing world across platforms.",
-      proofIntro: "Approximate combined follows across my public communities.",
-      proofTotal: "combined follows",
-      proofTelegram: "Telegram community",
-      proofLanguages: "languages",
-      visitorLabel: "site visits since launch",
-      privacy: "Privacy",
-      imprint: "Impressum",
-      comingSoon: "Link coming soon"
-    },
     de: {
-      heroEyebrow: "Die visuelle Welt von",
-      heroLead: "Ein visuelles Journal, geprägt von zwei Welten.",
-      heroTopics: "Fotografie · Video · Ruhige Momente · Gedanken",
-      exploreButton: "Mein Journal entdecken",
-      messageButton: "Kontakt",
-      followLabel: "Meinem Journal folgen",
-      followTitle: "Wähle, wo unsere Geschichten weitergehen.",
-      followIntro: "Fotos, Videos, Alltagsmomente und Gedanken — jede Plattform zeigt eine andere Seite meiner Welt.",
-      messageLabel: "Kontakt",
-      messageTitle: "Wähle deinen bevorzugten Messenger.",
-      messageIntro: "Nutze Telegram, Signal oder WhatsApp für Nachrichten und allgemeine Anfragen. Alle Links auf dieser Seite sind offiziell.",
-      aboutLabel: "Über Serena Cersea",
-      aboutTitle: "Ein visuelles Leben zwischen Kulturen, Orten und Ideen.",
-      aboutText: "Dies ist mein Journal — eine Sammlung aus Fotografien, Videos, ruhigen Momenten und persönlichen Gedanken.",
-      projectsLabel: "Kreative Projekte",
-      projectsTitle: "Weitere Geschichten entstehen.",
-      projectsText: "Filme, visuelle Experimente, Bildungsideen und digitale Projekte werden nach und nach hier erscheinen.",
-      contactLabel: "Geschäftlicher Kontakt",
-      contactTitle: "Kooperationen und kreative Arbeit.",
-      contactText: "Für Kooperationen und professionelle Anfragen kontaktiere mich per E-Mail.",
-      contactButton: "E-Mail schreiben",
+      skipLink: "Direkt zu meinen Links",
+      heroEyebrow: "Cosplay & Digital Creator",
+      heroLead: "Cosplay, Fotos, Videos & ein bisschen Chaos ♡",
+      heroTopics: "Neue Looks · kurze Videos · kreative Momente",
+      exploreButton: "Folge mir",
+      messageButton: "Schreib mir",
+      officialLinks: "Alle Links auf dieser Seite sind offiziell.",
+      followLabel: "Finde mich online",
+      followTitle: "Meine drei wichtigsten Plattformen.",
+      followIntro: "Fotos, Reels, kurze Videos und Updates — wähle einfach deine Lieblingsplattform.",
+      messageLabel: "Direkter Kontakt",
+      messageTitle: "Du möchtest mir schreiben?",
+      messageIntro: "Telegram ist der schnellste Weg. WhatsApp und Signal funktionieren natürlich auch.",
       proofLabel: "Community",
-      proofTitle: "Eine wachsende Welt auf mehreren Plattformen.",
-      proofIntro: "Ungefähre Summe der Follows in meinen öffentlichen Communities.",
+      proofTitle: "Schon ziemlich viele von uns. ♡",
+      proofIntro: "Ungefähre Reichweite über meine Communities und echte Website-Aufrufe.",
       proofTotal: "Follows insgesamt",
       proofTelegram: "Telegram-Community",
       proofLanguages: "Sprachen",
-      visitorLabel: "Website-Aufrufe seit dem Start",
+      visitorLabel: "Website-Aufrufe",
+      aboutLabel: "Über Sersea Rou",
+      aboutTitle: "Cosplay, Kamera und immer wieder ein neuer Look.",
+      aboutText: "Ich liebe es, mit Looks, Rollen, Licht und kleinen Geschichten zu spielen — mal süß, mal dramatisch, aber immer ich.",
+      tagCosplay: "Cosplay",
+      tagPhotos: "Fotos",
+      tagVideos: "Videos",
+      tagStories: "Stories",
+      diaryLabel: "Visual Diary",
+      diaryTitle: "Ein paar Momente aus meiner Welt.",
+      diaryIntro: "Cosplay, Looks und kleine Szenen — ohne festen Rahmen, einfach als Teil meiner Welt.",
+      contactLabel: "Business",
+      contactTitle: "Kooperation oder kreatives Projekt?",
+      contactText: "Für Kooperationen und professionelle Anfragen erreichst du mich per E-Mail.",
+      contactButton: "E-Mail schreiben",
       privacy: "Datenschutz",
-      imprint: "Impressum",
-      comingSoon: "Link folgt"
+      imprint: "Impressum"
     },
+
+    en: {
+      skipLink: "Skip to my links",
+      heroEyebrow: "Cosplay & Digital Creator",
+      heroLead: "Cosplay, photos, videos & a little chaos ♡",
+      heroTopics: "New looks · short videos · creative moments",
+      exploreButton: "Follow me",
+      messageButton: "Message me",
+      officialLinks: "Every link on this page is official.",
+      followLabel: "Find me online",
+      followTitle: "My three main platforms.",
+      followIntro: "Photos, reels, short videos and updates — pick your favorite platform.",
+      messageLabel: "Direct contact",
+      messageTitle: "Want to say hi?",
+      messageIntro: "Telegram is the quickest way. WhatsApp and Signal work too.",
+      proofLabel: "Community",
+      proofTitle: "There are quite a few of us already. ♡",
+      proofIntro: "Approximate reach across my communities and real website visits.",
+      proofTotal: "combined follows",
+      proofTelegram: "Telegram community",
+      proofLanguages: "languages",
+      visitorLabel: "website visits",
+      aboutLabel: "About Sersea Rou",
+      aboutTitle: "Cosplay, camera and always a new look.",
+      aboutText: "I love playing with looks, characters, light and little stories — sometimes cute, sometimes dramatic, but always me.",
+      tagCosplay: "Cosplay",
+      tagPhotos: "Photos",
+      tagVideos: "Videos",
+      tagStories: "Stories",
+      diaryLabel: "Visual Diary",
+      diaryTitle: "A few moments from my world.",
+      diaryIntro: "Cosplay, looks and little scenes — without a rigid frame, simply part of my world.",
+      contactLabel: "Business",
+      contactTitle: "Collaboration or creative project?",
+      contactText: "For collaborations and professional enquiries, reach me by email.",
+      contactButton: "Write by email",
+      privacy: "Privacy",
+      imprint: "Impressum"
+    },
+
     ru: {
-      heroEyebrow: "Визуальный мир",
-      heroLead: "Визуальный журнал, созданный двумя мирами.",
-      heroTopics: "Фотография · Видео · Тихие моменты · Мысли",
-      exploreButton: "Открыть мой журнал",
-      messageButton: "Связаться",
-      followLabel: "Следить за моим журналом",
-      followTitle: "Выберите, где продолжатся наши истории.",
-      followIntro: "Фотографии, видео, повседневные моменты и размышления — каждая платформа показывает другую часть моего мира.",
-      messageLabel: "Связаться",
-      messageTitle: "Выберите удобный мессенджер.",
-      messageIntro: "Используйте Telegram, Signal или WhatsApp для сообщений и общих вопросов. Все ссылки на этой странице официальные.",
-      aboutLabel: "О Serena Cersea",
-      aboutTitle: "Визуальная жизнь между культурами, местами и идеями.",
-      aboutText: "Это мой журнал — коллекция фотографий, видео, тихих моментов и личных размышлений.",
-      projectsLabel: "Творческие проекты",
-      projectsTitle: "Новые истории обретают форму.",
-      projectsText: "Фильмы, визуальные эксперименты, образовательные идеи и цифровые проекты постепенно появятся здесь.",
-      contactLabel: "Деловой контакт",
-      contactTitle: "Сотрудничество и творческая работа.",
-      contactText: "По вопросам сотрудничества и профессиональным предложениям напишите мне по электронной почте.",
-      contactButton: "Написать по email",
+      skipLink: "Перейти к моим ссылкам",
+      heroEyebrow: "Cosplay & Digital Creator",
+      heroLead: "Косплей, фото, видео и немного хаоса ♡",
+      heroTopics: "Новые образы · короткие видео · творческие моменты",
+      exploreButton: "Подписаться",
+      messageButton: "Написать мне",
+      officialLinks: "Все ссылки на этой странице официальные.",
+      followLabel: "Найди меня онлайн",
+      followTitle: "Три мои главные платформы.",
+      followIntro: "Фото, рилсы, короткие видео и обновления — выбирай любимую платформу.",
+      messageLabel: "Связаться напрямую",
+      messageTitle: "Хочешь написать мне?",
+      messageIntro: "Telegram — самый быстрый вариант. WhatsApp и Signal тоже работают.",
       proofLabel: "Сообщество",
-      proofTitle: "Растущий мир на разных платформах.",
-      proofIntro: "Приблизительное суммарное число подписок в моих публичных сообществах.",
+      proofTitle: "Нас уже довольно много. ♡",
+      proofIntro: "Примерный общий охват моих сообществ и реальные посещения сайта.",
       proofTotal: "подписок на платформах",
       proofTelegram: "сообщество Telegram",
       proofLanguages: "языка",
-      visitorLabel: "посещений сайта с момента запуска",
+      visitorLabel: "посещений сайта",
+      aboutLabel: "О Sersea Rou",
+      aboutTitle: "Косплей, камера и всегда новый образ.",
+      aboutText: "Мне нравится играть с образами, персонажами, светом и маленькими историями — иногда милыми, иногда драматичными, но всегда моими.",
+      tagCosplay: "Косплей",
+      tagPhotos: "Фото",
+      tagVideos: "Видео",
+      tagStories: "Истории",
+      diaryLabel: "Visual Diary",
+      diaryTitle: "Несколько моментов из моего мира.",
+      diaryIntro: "Косплей, образы и маленькие сцены — без жёстких рамок, просто часть моего мира.",
+      contactLabel: "Business",
+      contactTitle: "Сотрудничество или творческий проект?",
+      contactText: "По вопросам сотрудничества и профессиональным предложениям напиши мне на email.",
+      contactButton: "Написать по email",
       privacy: "Конфиденциальность",
-      imprint: "Правовая информация",
-      comingSoon: "Ссылка появится позже"
+      imprint: "Правовая информация"
     }
   };
 
@@ -117,61 +134,74 @@
   const businessEmailLink = document.querySelector("#business-email-link");
   const visitorCountElement = document.querySelector("#visitor-count");
 
-  let activeLanguage = config.defaultLanguage || "en";
+  let activeLanguage = config.defaultLanguage || "de";
   let visitorCountValue = 0;
 
+  function createBadge(item) {
+    const badge = document.createElement("span");
+    badge.className = "card-badge";
+    badge.textContent = item.badge || item.name.slice(0, 2).toUpperCase();
+    badge.setAttribute("aria-hidden", "true");
+    return badge;
+  }
+
   function createLinkCard(item, type) {
-    const hasUrl = typeof item.url === "string" && item.url.trim() !== "";
     const link = document.createElement("a");
+    const isMessage = type === "message";
 
-    link.className = type === "message" ? "message-card" : "social-card";
-    link.href = hasUrl ? item.url : "#";
+    link.className = isMessage ? "message-card" : "social-card";
+    link.href = item.url;
+    link.target = "_blank";
+    link.rel = isMessage ? "noopener noreferrer" : "me noopener noreferrer";
+    link.referrerPolicy = "no-referrer";
     link.dataset.itemId = item.id;
+    link.setAttribute("aria-label", `${item.name}: ${item.descriptions[activeLanguage] || item.descriptions.de}`);
 
-    if (hasUrl) {
-      link.target = "_blank";
-      link.rel = type === "social" ? "me noopener noreferrer" : "noopener noreferrer";
-      link.referrerPolicy = "no-referrer";
-    } else {
-      link.classList.add("is-disabled");
-      link.setAttribute("aria-disabled", "true");
-      link.addEventListener("click", (event) => event.preventDefault());
+    if (item.featured) {
+      link.classList.add("is-featured");
     }
 
-    const content = document.createElement("div");
-    const topLine = document.createElement("div");
-    topLine.className = "card-topline";
+    const head = document.createElement("div");
+    head.className = "card-head";
+
+    const identity = document.createElement("div");
+    identity.className = "card-identity";
 
     const name = document.createElement("span");
     name.className = "card-name";
     name.textContent = item.name;
 
+    identity.append(createBadge(item), name);
+
     const arrow = document.createElement("span");
     arrow.className = "card-arrow";
     arrow.setAttribute("aria-hidden", "true");
-    arrow.textContent = "→";
+    arrow.textContent = "↗";
+
+    head.append(identity, arrow);
 
     const description = document.createElement("p");
     description.className = "card-description";
-    description.textContent = item.descriptions[activeLanguage] || item.descriptions.en;
+    description.textContent = item.descriptions[activeLanguage] || item.descriptions.de;
 
-    topLine.append(name, arrow);
-    content.append(topLine, description);
+    link.append(head, description);
 
     if (item.audience) {
       const audience = document.createElement("span");
       audience.className = "card-audience";
-      audience.textContent = item.audience[activeLanguage] || item.audience.en;
-      content.append(audience);
+      audience.textContent = item.audience[activeLanguage] || item.audience.de;
+      link.append(audience);
     }
 
-    link.append(content);
-
-    if (!hasUrl && type !== "message") {
-      const status = document.createElement("span");
-      status.className = "card-status";
-      status.textContent = translations[activeLanguage].comingSoon;
-      link.append(status);
+    if (item.featured) {
+      const preferred = document.createElement("span");
+      preferred.className = "card-preferred";
+      preferred.textContent = activeLanguage === "de"
+        ? "Empfohlen"
+        : activeLanguage === "ru"
+          ? "Рекомендуется"
+          : "Recommended";
+      link.append(preferred);
     }
 
     return link;
@@ -186,7 +216,6 @@
       ...config.messageLinks.map((item) => createLinkCard(item, "message"))
     );
   }
-
 
   function updateVisitorCount() {
     if (!visitorCountElement) return;
@@ -253,10 +282,12 @@
     });
   });
 
-  yearElement.textContent = String(new Date().getFullYear());
+  if (yearElement) {
+    yearElement.textContent = String(new Date().getFullYear());
+  }
 
   if (businessEmailLink && config.businessEmail) {
-    const subject = encodeURIComponent("Business enquiry — Serena Cersea");
+    const subject = encodeURIComponent("Business enquiry — Sersea Rou");
     businessEmailLink.href = `mailto:${config.businessEmail}?subject=${subject}`;
   }
 
